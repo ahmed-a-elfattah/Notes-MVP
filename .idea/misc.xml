@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Mobile Track/AndroidLearnProjects/NotesMVP/app/src/main/res/drawable/ic_note_add_white_24dp.xml" value="0.21614583333333334" />
+        <entry key="..\:/Mobile Track/AndroidLearnProjects/NotesMVP/app/src/main/res/drawable/ic_round_done_black_24dp.xml" value="0.21614583333333334" />
+        <entry key="..\:/Mobile Track/AndroidLearnProjects/NotesMVP/app/src/main/res/layout/fragment_add_note.xml" value="0.18611111111111112" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
