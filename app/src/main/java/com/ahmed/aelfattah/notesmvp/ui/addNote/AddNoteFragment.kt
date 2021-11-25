@@ -61,7 +61,10 @@ class AddNoteFragment : BottomSheetDialogFragment(), View.OnClickListener, AddNo
 
     override fun invalidNote(message: String) = showToast(message)
 
-    override fun noteAdded() = showToast(getString(R.string.added_successfully))
+    override fun noteAdded() {
+        showToast(getString(R.string.added_successfully))
+        dismiss()
+    }
 
     override fun onDestroy() {
         super.onDestroy()
