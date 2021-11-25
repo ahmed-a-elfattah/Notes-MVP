@@ -7,6 +7,8 @@ import com.ahmed.aelfattah.notesmvp.data.sources.local.NoteDao
 import com.ahmed.aelfattah.notesmvp.data.sources.local.NoteDatabase
 import com.ahmed.aelfattah.notesmvp.ui.addNote.AddNoteContract
 import com.ahmed.aelfattah.notesmvp.ui.addNote.AddNotePresenter
+import com.ahmed.aelfattah.notesmvp.ui.main.MainContract
+import com.ahmed.aelfattah.notesmvp.ui.main.MainPresenter
 import org.koin.dsl.module
 
 
@@ -36,6 +38,7 @@ val repositoryImpModule = module {
 
 val pagesModules = module {
     factory { (view: AddNoteContract.View) -> AddNotePresenter(repositoryImp = get(), view = view) }
+    factory { (view: MainContract.View) -> MainPresenter(repositoryImp = get(), view = view) }
 }
 
 val appModules = listOf(noteDatabaseModule, repositoryImpModule, pagesModules)

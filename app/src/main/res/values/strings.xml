@@ -3,4 +3,7 @@
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="added_successfully">Added successfully</string>
+    <string name="make_a_note">Make a note</string>
+    <string name="relax_and_write_something_beautiful">Relax and write something beautiful</string>
+    <string name="add_your_first_note">Add your first note</string>
 </resources>

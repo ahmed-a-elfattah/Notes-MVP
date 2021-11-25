@@ -5,12 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
+import com.ahmed.aelfattah.notesmvp.R
 import com.ahmed.aelfattah.notesmvp.data.domain.Note
 import com.ahmed.aelfattah.notesmvp.databinding.FragmentAddNoteBinding
 import com.ahmed.aelfattah.notesmvp.utils.hideKeyboard
-import com.ahmed.aelfattah.notesmvp.R
+import com.ahmed.aelfattah.notesmvp.utils.showToast
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
@@ -25,7 +25,7 @@ class AddNoteFragment : BottomSheetDialogFragment(), View.OnClickListener, AddNo
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentAddNoteBinding.inflate(layoutInflater, container, false)
@@ -59,13 +59,9 @@ class AddNoteFragment : BottomSheetDialogFragment(), View.OnClickListener, AddNo
     override fun getNote(): Note =
         Note(binding.tietTitle.text.toString(), binding.tietDescription.text.toString())
 
-    override fun invalidNote(message: String) =
-        Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
+    override fun invalidNote(message: String) = showToast(message)
 
-    override fun noteAdded() {
-        this.dismiss()
-        Toast.makeText(requireContext(), getString(R.string.added_successfully), Toast.LENGTH_LONG).show()
-    }
+    override fun noteAdded() = showToast(getString(R.string.added_successfully))
 
     override fun onDestroy() {
         super.onDestroy()
